@@ -7,7 +7,7 @@ import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict'
 export default function Home() {
 
   var result = formatDistanceToNowStrict(
-    new Date(2022, 9, 22), { unit: 'day'}
+    new Date(2022, 7, 23), { unit: 'day'}
   )
 console.log(result);
 
