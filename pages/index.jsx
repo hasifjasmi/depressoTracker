@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import formatDistanceToNowStrict from "date-fns/formatDistanceToNowStrict";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [result, setResult] = useState(
@@ -17,28 +17,27 @@ export default function Home() {
   var numDays = days[0];
   var diffDays = 100 - numDays;
 
-  
+  const [message, setMessage] = useState("");
 
-  if (numDays >= 100) {
-    document.getElementById("message").innerHTML =
-      "Congratulations zaf for not being depressed for " + result ;
-  } 
-  else {
-    if(diffDays != 1){
-      document.getElementById("message").innerHTML =
-      "hang in there lol, you have " +
-      parseInt(diffDays) +
-      " days left until you reach 100 days";
+  useEffect(() => {
+    if (numDays >= 100) {
+      setMessage("Congratulations zaf for not being depressed for " + result);
+    } else {
+      if (diffDays != 1) {
+        setMessage(
+          "hang in there lol, you have " +
+            parseInt(diffDays) +
+            " days left until you reach 100 days"
+        );
+      } else {
+        setMessage(
+          "hang in there lol, you have " +
+            parseInt(diffDays) +
+            " day left until you reach 100 days"
+        );
+      }
     }
-    else{
-      document.getElementById("message").innerHTML =
-      "hang in there lol, you have " +
-      parseInt(diffDays) +
-      " day left until you reach 100 days";
-    }
-   
-  }
-
+  }, []);
 
   return (
     <div className="bg-gradient-to-r from-[#6EB869] to-[#61C5B4]">
@@ -51,11 +50,11 @@ export default function Home() {
 
         <main className={styles.main}>
           <h1 className={styles.title}>
-            <b>{result}   </b>since Zafira last{" "}
+            <b>{result} </b>since Zafira last{" "}
             <Link href="posts/first-post">Depresso</Link>
           </h1>
 
-          <p id="message" className={styles.description}></p>
+          <p className={styles.description}>{message}</p>
 
           <div className={styles.grid}>
             <a href="https://twitter.com/acipooh" className={styles.card}>
@@ -89,7 +88,10 @@ export default function Home() {
               className={styles.card}
             >
               <h2>Zaf's linkedin &rarr;</h2>
-              <p>I don't know maybe a hr was feeling pity of her soo they want to recruit her</p>
+              <p>
+                I don't know maybe a hr was feeling pity of her soo they want to
+                recruit her
+              </p>
             </a>
           </div>
         </main>
