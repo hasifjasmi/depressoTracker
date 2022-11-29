@@ -5,12 +5,6 @@ import Link from "next/link";
 import formatDistanceToNowStrict from "date-fns/formatDistanceToNowStrict";
 import { useState } from "react";
 
-function displayCongrats(days) {
-  if (days <= 96) {
-    console.log("congrats again !!!");
-  }
-}
-
 export default function Home() {
   const [result, setResult] = useState(
     formatDistanceToNowStrict(new Date(2022, 7, 23), {
