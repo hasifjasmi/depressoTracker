@@ -14,7 +14,7 @@ export default function Home() {
   console.log(result);
   var str = result;
   var days = str.match(/(\d+)/);
-  var numDays = days[0];
+  var numDays = days[0] - 1;
   var diffDays = 100 - numDays;
 
   const [message, setMessage] = useState("");
@@ -50,11 +50,19 @@ export default function Home() {
 
         <main className={styles.main}>
           <h1 className={styles.title}>
-            <b>{result} </b>since Zafira last{" "}
-            <Link href="posts/first-post">Depresso</Link>
+            <b>{numDays} days </b>since Zafira last{" "}
+            <Link
+              target="_blank"
+              href="https://www.youtube.com/watch?v=E61gXw7aLJk&ab_channel=SendenDahaG%C3%BCzel"
+            >
+              Depresso
+            </Link>
           </h1>
 
-          <p className={styles.description}>{message}</p>
+          <p className={styles.description}>
+            {message}
+            <p> latest depresso is at 23/8/2022</p>
+          </p>
 
           <div className={styles.grid}>
             <a href="https://twitter.com/acipooh" className={styles.card}>
