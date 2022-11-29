@@ -4,6 +4,16 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import formatDistanceToNowStrict from "date-fns/formatDistanceToNowStrict";
 import { useState, useEffect } from "react";
+import bg from "../public/squirrel-dancing.gif";
+
+const myStyle = {
+  backgroundImage:
+    "url('file:///D:/React%20Files/next-tutorial/public/squirrel-dancing.gif')",
+  height: "100vh",
+  marginTop: "-70px",
+  fontSize: "50px",
+  backgroundSize: "cover",
+};
 
 export default function Home() {
   const [result, setResult] = useState(
@@ -11,6 +21,7 @@ export default function Home() {
       unit: "day",
     })
   );
+
   console.log(result);
   var str = result;
   var days = str.match(/(\d+)/);
@@ -97,8 +108,8 @@ export default function Home() {
             >
               <h2>Zaf's linkedin &rarr;</h2>
               <p>
-                I don't know maybe a hr was feeling pity of her soo they want to
-                recruit her
+                I'm not sure, maybe HR felt sorry for her and wanted to hire
+                her.
               </p>
             </a>
           </div>
