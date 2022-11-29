@@ -5,6 +5,12 @@ import Link from "next/link";
 import formatDistanceToNowStrict from "date-fns/formatDistanceToNowStrict";
 import { useState } from "react";
 
+function displayCongrats(days) {
+  if (days <= 96) {
+    console.log("congrats again !!!");
+  }
+}
+
 export default function Home() {
   const [result, setResult] = useState(
     formatDistanceToNowStrict(new Date(2022, 7, 23), {
@@ -12,9 +18,22 @@ export default function Home() {
     })
   );
   console.log(result);
+  var str = result;
+  var days = str.match(/(\d+)/);
+  var numDays = days[0];
+  var diffDays = 100 - numDays;
 
+  if (numDays >= 100) {
+    document.getElementById("message").innerHTML =
+      "Congratulations zaf for not being depressed for " + { result };
+  } else {
+    document.getElementById("message").innerHTML =
+      "hang in there lol, you have " +
+      parseInt(diffDays) +
+      " days left until you reach 100 days";
+  }
   return (
-    <div className="bg-[fff]">
+    <div className="bg-gradient-to-r from-[#6EB869] to-[#61C5B4]">
       <div className={styles.container}>
         <Head>
           <title>Zaf depresoo</title>
@@ -28,9 +47,7 @@ export default function Home() {
             <Link href="posts/first-post">Depresso</Link>
           </h1>
 
-          <p className={styles.description}>
-            Congratulations zaf for not being depressed
-          </p>
+          <p id="message" className={styles.description}></p>
 
           <div className={styles.grid}>
             <a href="https://twitter.com/acipooh" className={styles.card}>
