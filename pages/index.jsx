@@ -3,29 +3,38 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import formatDistanceToNowStrict from "date-fns/formatDistanceToNowStrict";
-import { useState, useEffect } from "react";
-import bg from "../public/squirrel-dancing.gif";
-
-const myStyle = {
-  backgroundImage:
-    "url('file:///D:/React%20Files/next-tutorial/public/squirrel-dancing.gif')",
-  height: "100vh",
-  marginTop: "-70px",
-  fontSize: "50px",
-  backgroundSize: "cover",
-};
+import { useState, useEffect, useRef } from "react";
+import startOfToday from "date-fns/startOfToday";
+import formatDistanceStrict from "date-fns/formatDistanceStrict";
 
 export default function Home() {
+  const ref = useRef(null);
+  // var viz = tableau.Viz(
+  //   ref.current,
+  //   "https://public.tableau.com/views/ZafTableau/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
+  // );
+
+  var MasDate = startOfToday();
+
   const [result, setResult] = useState(
     formatDistanceToNowStrict(new Date(2022, 7, 23), {
       unit: "day",
     })
   );
 
-  console.log(result);
-  var str = result;
+  var month = MasDate.getMonth();
+
+  var calc = formatDistanceStrict(
+    new Date(2022, month, MasDate.getDate()),
+    new Date(2022, 7, 23),
+    { unit: "day" }
+  );
+
+  console.log(calc);
+
+  var str = calc;
   var days = str.match(/(\d+)/);
-  var numDays = days[0] - 1;
+  var numDays = days[0];
   var diffDays = 100 - numDays;
 
   const [message, setMessage] = useState("");
@@ -72,7 +81,7 @@ export default function Home() {
 
           <p className={styles.description}>
             {message}
-            <p> latest depresso is at 23/8/2022</p>
+            <p> latest depresso is on {} 23/8/2022</p>
           </p>
 
           <div className={styles.grid}>
@@ -114,6 +123,7 @@ export default function Home() {
             </a>
           </div>
         </main>
+        <div ref={ref}></div>
 
         <footer className={styles.footer}>
           <a

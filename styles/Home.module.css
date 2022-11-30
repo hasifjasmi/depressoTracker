@@ -1,6 +1,6 @@
 .container {
   padding: 0 2rem;
-  background-image: url("../public/squirrel-dancing.gif"), linear-gradient(#6EB869, #61C5B4); 
+  /* background-image: url("../public/squirrel-dancing.gif"), linear-gradient(#6EB869, #61C5B4);  */
 }
 
 .main {
@@ -44,13 +44,13 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
-  -webkit-text-stroke: 1px white;
+  /* -webkit-text-stroke: 1px white; */
 }
 
 .title,
 .description {
   text-align: center;
-  -webkit-text-stroke: 0.2px white;
+  /* -webkit-text-stroke: 0.2px white; */
 }
 
 .description {
