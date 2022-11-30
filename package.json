@@ -12,9 +12,7 @@
     "date-fns": "^2.29.3",
     "next": "13.0.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tableau-api": "^2.2.3",
-    "tableau-react": "^2.0.0-beta.0"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
