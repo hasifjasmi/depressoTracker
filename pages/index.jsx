@@ -41,7 +41,9 @@ export default function Home() {
 
   useEffect(() => {
     if (numDays >= 100) {
-      setMessage("Congratulations zaf for not being depressed for " + result);
+      setMessage(
+        "Congratulations zaf for not being depressed for " + numDays + " days"
+      );
     } else {
       if (diffDays != 1) {
         setMessage(
