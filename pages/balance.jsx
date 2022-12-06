@@ -1,5 +1,5 @@
 function Balance() {
-  var food = 176.01;
+  var food = 176.01 - 32.6;
   var general = 1.52;
   var transport = 168.08;
 
@@ -48,7 +48,7 @@ function Balance() {
           Food Balance: <b>RM{food}</b>
         </div>
         <div className={`${colourGeneral} basis-auto p-5 rounded-md`}>
-          General Balance : <b>RM{general}</b>
+          General Balance: <b>RM{general}</b>
         </div>
         <div className={`${colourTransport} basis-auto p-5 rounded-md`}>
           Transportation Balance: <b>RM{transport}</b>

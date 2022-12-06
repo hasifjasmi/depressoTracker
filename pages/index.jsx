@@ -7,6 +7,7 @@ import { useState, useEffect, useRef } from "react";
 import startOfToday from "date-fns/startOfToday";
 import formatDistanceStrict from "date-fns/formatDistanceStrict";
 import Balance from "./balance";
+import Background from "./background";
 
 // import BasicEmbed from "./chart";
 // import dynamic from "next/dynamic";
@@ -68,6 +69,7 @@ export default function Home() {
 
   return (
     <div className="bg-gradient-to-r from-[#6EB869] to-[#61C5B4]">
+      <Background />
       <div className={styles.container}>
         <Head>
           <title>Zaf depreso</title>

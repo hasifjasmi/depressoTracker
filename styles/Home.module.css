@@ -1,8 +1,8 @@
 .container {
   padding: 0 2rem;
-  background-image:  linear-gradient(#6EB869, #61C5B4); 
-  background: url("../public/zaf/zaf\ \(1\).png") no-repeat fixed center; 
-  background: url("../public/zaf/zaf\ \(2\).png") no-repeat 100px;
+  /* background-image:  linear-gradient(#6EB869, #61C5B4);  */
+  /* background: url("../public/zaf/zaf\ \(1\).png") no-repeat fixed center; 
+  background: url("../public/zaf/zaf\ \(2\).png") no-repeat 100px; */
 }
 
 .main {
