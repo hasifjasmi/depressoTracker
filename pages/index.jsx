@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import formatDistanceToNowStrict from "date-fns/formatDistanceToNowStrict";
 import { useState, useEffect, useRef } from "react";
 import startOfToday from "date-fns/startOfToday";
 import formatDistanceStrict from "date-fns/formatDistanceStrict";
@@ -22,12 +21,6 @@ import List from "./list";
 
 export default function Home() {
   var MasDate = startOfToday();
-
-  const [result, setResult] = useState(
-    formatDistanceToNowStrict(new Date(2022, 7, 23), {
-      unit: "day",
-    })
-  );
 
   var month = MasDate.getMonth();
 
