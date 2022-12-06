@@ -8,6 +8,7 @@ import startOfToday from "date-fns/startOfToday";
 import formatDistanceStrict from "date-fns/formatDistanceStrict";
 import Balance from "./balance";
 import Background from "./background";
+import List from "./list";
 
 // import BasicEmbed from "./chart";
 // import dynamic from "next/dynamic";
@@ -137,6 +138,12 @@ export default function Home() {
             </a>
           </div>
         </main>
+
+        {/* list of things */}
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-xl">List of things that made her depressed:</h1>
+          <List />
+        </div>
 
         <Balance />
 
