@@ -63,7 +63,7 @@ export default function Home() {
 
   return (
     <div className="bg-gradient-to-r from-[#6EB869] to-[#61C5B4]">
-      <Background />
+      {/* <Background /> */}
       <div className={styles.container}>
         <Head>
           <title>Zaf depreso</title>
@@ -134,7 +134,9 @@ export default function Home() {
 
         {/* list of things */}
         <div className="flex flex-col justify-center items-center">
-          <h1 className="text-xl">List of things that made her depressed:</h1>
+          <h1 className="text-xl font-bold">
+            List of things that made her depressed:
+          </h1>
           <List />
         </div>
 

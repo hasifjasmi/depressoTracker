@@ -1,15 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function List() {
   return (
     <>
-      <table class="table-auto text-lg border-separate border-spacing-2 pb-20">
+      <table class="table-auto text-lg border-separate border-spacing-2 pb-10">
         <thead>
           <tr>
-            <th class="" colSpan={2}>
+            <th class="font-semibold" colSpan={2}>
               Reason
             </th>
-            <th class="">Date</th>
+            <th class="font-semibold">Date</th>
             <th class=""></th>
           </tr>
         </thead>
@@ -30,6 +31,51 @@ function List() {
           <tr>
             <td class="">2.</td>
             <td class="">tbd</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p className="text-xl font-bold pt-5">honourable mentions:</p>
+      <table class="table-auto text-lg border-separate  border-spacing-2 pb-10">
+        <tbody>
+          <tr>
+            <td class="">1.</td>
+            <td class="">Dapat surat tawaran masuk UMS</td>
+            <td className="text-center">
+              <Link
+                className="underline text-sky-600"
+                target="_blank"
+                href="/dome"
+              >
+                More info
+              </Link>
+            </td>
+          </tr>
+          <tr>
+            <td class="">2.</td>
+            <td class="">Dome 1Borneo tutup</td>
+            <td className="text-center">
+              <Link
+                className="underline text-sky-600"
+                target="_blank"
+                href="/dome"
+              >
+                More info
+              </Link>
+            </td>
+          </tr>
+          <tr>
+            <td class="">3.</td>
+            <td class="">Starbuck 1Borneo tutup</td>
+            <td className="text-center">
+              <Link
+                className="underline text-sky-600"
+                target="_blank"
+                href="https://www.youtube.com/watch?v=E61gXw7aLJk&ab_channel=SendenDahaG%C3%BCzel"
+              >
+                More info
+              </Link>
+            </td>
           </tr>
         </tbody>
       </table>

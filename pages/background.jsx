@@ -3,7 +3,7 @@ import Image from "next/image";
 function Background() {
   return (
     <>
-      {/* <div className="relative opacity-50">
+      <div className="relative opacity-50">
         <Image
           className="absolute right-0 rounded-lg"
           src="/zaf/zaf (1).png"
@@ -46,7 +46,7 @@ function Background() {
           width={180}
           height={16}
         />
-      </div> */}
+      </div>
     </>
   );
 }

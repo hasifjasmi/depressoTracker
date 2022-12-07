@@ -64,7 +64,7 @@
 }
 
 .code {
-  background: #fafafa;
+  background: #fafa;
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
@@ -95,8 +95,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #29fbbc;
+  border-color: #00fffb;
 }
 
 .card h2 {
