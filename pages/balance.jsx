@@ -18,7 +18,7 @@ var days = str.match(/(\d+)/);
 var numDays = days[0];
 
 function Balance() {
-  var food = 176.01 - 32.6;
+  var food = 114.61;
   var general = 1.52;
   var transport = 168.08;
 
@@ -79,7 +79,7 @@ function Balance() {
         {/* total */}
         <div className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md p-5 w-[200px]">
           <h1 className="text-center font-mono">
-            <p> Total spent for {numDays} days: RM 874.99</p>
+            <p> Total spent for {numDays} days: RM 903.79</p>
           </h1>
         </div>
       </div>
