@@ -88,7 +88,7 @@ function Balance() {
             href="https://docs.google.com/spreadsheets/d/1nfx_9ZCbyZ2I0EYW32qaIP2tSKL9HM8T5Do1HMdGj_0/edit?usp=sharing"
           >
             {" "}
-            Click me to see full the full detail
+            Click me to see the full detail
           </a>
         </button>
       </div>
