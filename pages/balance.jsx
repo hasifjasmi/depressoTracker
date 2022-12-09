@@ -82,6 +82,15 @@ function Balance() {
             <p> Total spent for {numDays} days: RM 903.79</p>
           </h1>
         </div>
+        <button>
+          <a
+            target="_blank"
+            href="https://docs.google.com/spreadsheets/d/1nfx_9ZCbyZ2I0EYW32qaIP2tSKL9HM8T5Do1HMdGj_0/edit?usp=sharing"
+          >
+            {" "}
+            Click me to see full the full detail
+          </a>
+        </button>
       </div>
     </>
   );
