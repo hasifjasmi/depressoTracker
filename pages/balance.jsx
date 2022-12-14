@@ -76,7 +76,7 @@ var numDays = days[0];
 
 function Balance({ total }) {
   // useEffect(() => {
-  var food = total[1];
+  var food = total[0];
   var general = total[1];
   var transport = total[2];
   var totalspend = total[3];
