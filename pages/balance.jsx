@@ -76,6 +76,9 @@ var numDays = days[0];
 
 function Balance({ total }) {
   // useEffect(() => {
+  if (total[0] === undefined) {
+    return;
+  }
 
   let balance = {
     food: total[0],
@@ -83,10 +86,6 @@ function Balance({ total }) {
     transport: total[2],
     totalspend: total[3],
   };
-
-  if (balance.food === undefined) {
-    return;
-  }
 
   function changeColour(bal) {
     var colour;
