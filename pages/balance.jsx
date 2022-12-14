@@ -75,10 +75,12 @@ var days = str.match(/(\d+)/);
 var numDays = days[0];
 
 function Balance({ total }) {
-  var food = total[1];
-  var general = total[1];
-  var transport = total[2];
-  var totalspend = total[3];
+  useEffect(() => {
+    var food = total[1];
+    var general = total[1];
+    var transport = total[2];
+    var totalspend = total[3];
+  }, []);
 
   function changeColour(bal) {
     var colour;
