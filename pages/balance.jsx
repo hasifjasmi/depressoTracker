@@ -1,5 +1,62 @@
 import formatDistanceStrict from "date-fns/formatDistanceStrict";
+// import * as firebase from "firebase-admin";
 import startOfToday from "date-fns/startOfToday";
+import { useEffect } from "react";
+// import { google } from "googleapis";
+// import keys from "../keys.json";
+// import amount from "./admin";
+
+// useEffect(() => {
+// const { google, google } = require("googleapis");
+// const keys = require("../keys.json");
+
+//
+// const SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"];
+
+// const client = new google.auth.JWT(
+//   keys.client_email,
+//   null,
+//   keys.private_key,
+//   SCOPES
+// );
+
+// client.authorize(function (err, tokens) {
+//   if (err) {
+//     console.log("fail lol");
+//     return;
+//   } else {
+//     console.log("Connected!");
+//     gsrun(client);
+//   }
+// });
+
+// async function gsrun(cl) {
+//   const gsapi = google.sheets({ version: "v4", auth: cl });
+
+//   const opt = {
+//     spreadsheetId: "1nfx_9ZCbyZ2I0EYW32qaIP2tSKL9HM8T5Do1HMdGj_0",
+//     range: "G7:I10",
+//   };
+
+//   let data = await gsapi.spreadsheets.values.get(opt);
+//   function getAmount() {
+//     var dataArray = data.data.values;
+//     var food = dataArray[0][2];
+//     var general = dataArray[1][2];
+//     var transport = dataArray[2][2];
+//     var total = dataArray[3][2];
+//     var amount = {
+//       food: food,
+//       general: general,
+//       transport: transport,
+//       total: total,
+//     };
+//     return amount;
+//   }
+// }
+// }, []);
+
+// var jumlah = getAmount();
 
 var MasDate = startOfToday();
 
@@ -11,16 +68,17 @@ var calc = formatDistanceStrict(
   { unit: "day" }
 );
 
-console.log(calc);
+// console.log(calc);
 
 var str = calc;
 var days = str.match(/(\d+)/);
 var numDays = days[0];
 
-function Balance() {
+function Balance({ total }) {
   var food = 97.61;
   var general = 1.52;
   var transport = 124.78;
+  // console.log("seee " + total);
 
   function changeColour(bal) {
     var colour;
@@ -79,7 +137,10 @@ function Balance() {
         {/* total */}
         <div className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md p-5 w-[200px]">
           <h1 className="text-center font-mono">
-            <p> Total spent for {numDays} days: RM 964.09</p>
+            <p>
+              {" "}
+              Total spent for {numDays} days: {total}
+            </p>
           </h1>
         </div>
         <button>
@@ -95,5 +156,15 @@ function Balance() {
     </>
   );
 }
+// export async function getServerSideProps() {
+//   const req = await fetch("http://localhost:3000/api/sheet");
+//   const res = await req.json();
+
+//   return {
+//     props: {
+//       sheetdata: res.data,
+//     },
+//   };
+// }
 
 export default Balance;
