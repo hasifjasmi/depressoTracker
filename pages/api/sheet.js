@@ -17,7 +17,7 @@ export default function handler(req, res) {
             //CUSTOMIZATION FROM HERE
             const opt = {
                 spreadsheetId: '1nfx_9ZCbyZ2I0EYW32qaIP2tSKL9HM8T5Do1HMdGj_0',
-                range: 'I7:I10'
+                range: 'K7:K10'
             };
 
             let data = await gsapi.spreadsheets.values.get(opt);

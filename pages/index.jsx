@@ -38,7 +38,6 @@ export default function Home({ sheetdata }) {
   var diffDays = 100 - numDays;
 
   const [message, setMessage] = useState("");
-  var total = sheetdata[3];
 
   useEffect(() => {
     if (numDays >= 100) {
@@ -141,7 +140,7 @@ export default function Home({ sheetdata }) {
           <List />
         </div>
 
-        <Balance total={total} />
+        <Balance total={sheetdata} />
         <footer className={styles.footer}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -167,6 +166,7 @@ export default function Home({ sheetdata }) {
   );
 }
 export async function getServerSideProps() {
+  // http://localhost:3000/api/sheet
   const req = await fetch("https://depresso-tracker.vercel.app/api/sheet");
   const res = await req.json();
 

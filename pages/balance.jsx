@@ -75,10 +75,10 @@ var days = str.match(/(\d+)/);
 var numDays = days[0];
 
 function Balance({ total }) {
-  var food = 97.61;
-  var general = 1.52;
-  var transport = 124.78;
-  // console.log("seee " + total);
+  var totalspend = total[3];
+  var food = total[0];
+  var general = total[1];
+  var transport = total[2];
 
   function changeColour(bal) {
     var colour;
@@ -139,7 +139,7 @@ function Balance({ total }) {
           <h1 className="text-center font-mono">
             <p>
               {" "}
-              Total spent for {numDays} days: {total}
+              Total spent for {numDays} days: {totalspend}
             </p>
           </h1>
         </div>
