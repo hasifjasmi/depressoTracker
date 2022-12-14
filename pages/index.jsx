@@ -167,7 +167,7 @@ export default function Home({ sheetdata }) {
   );
 }
 export async function getServerSideProps() {
-  const req = await fetch("http://localhost:3000/api/sheet");
+  const req = await fetch("https://depresso-tracker.vercel.app/api/sheet");
   const res = await req.json();
 
   return {
