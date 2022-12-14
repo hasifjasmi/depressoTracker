@@ -76,10 +76,10 @@ var numDays = days[0];
 
 function Balance({ total }) {
   // useEffect(() => {
-  var food = total[0];
-  var general = total[1];
-  var transport = total[2];
-  var totalspend = total[3];
+  let food = total[0];
+  let general = total[1];
+  let transport = total[2];
+  let totalspend = total[3];
 
   function changeColour(bal) {
     var colour;
