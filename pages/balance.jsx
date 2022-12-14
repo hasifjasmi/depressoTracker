@@ -76,16 +76,15 @@ var numDays = days[0];
 
 function Balance({ total }) {
   // useEffect(() => {
-  if (total[0] === undefined) {
-    return;
-  }
 
-  let balance = {
-    food: total[0],
-    general: total[1],
-    transport: total[2],
-    totalspend: total[3],
-  };
+  const total = total ?? [];
+
+  // let balance = {
+  var food = total[0];
+  var general = total[1];
+  var transport = total[2];
+  var totalspend = total[3];
+  // };
 
   function changeColour(bal) {
     var colour;
@@ -97,9 +96,9 @@ function Balance({ total }) {
       return (colour = "bg-green-600");
     }
   }
-  var colourFood = changeColour(balance.food);
-  var colourGeneral = changeColour(balance.general);
-  var colourTransport = changeColour(balance.transport);
+  var colourFood = changeColour(food);
+  var colourGeneral = changeColour(general);
+  var colourTransport = changeColour(transport);
 
   return (
     <>
@@ -146,7 +145,7 @@ function Balance({ total }) {
           <h1 className="text-center font-mono">
             <p>
               {" "}
-              Total spent for {numDays} days: {balance.totalspend}
+              Total spent for {numDays} days: {totalspend}
             </p>
           </h1>
         </div>
