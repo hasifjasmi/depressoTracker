@@ -148,12 +148,13 @@ export default function Home({ sheetdata }) {
             rel="noopener noreferrer"
           >
             Powered by{" "}
-            <span className={styles.logo}>
+            <span>
               <Link href={"posts/first-post"}>
                 {" "}
                 <Image
-                  src="/vercel.svg"
-                  alt="Vercel Logo"
+                  className="top-0"
+                  src="/zaf/zaf (12).png"
+                  alt="zaf pic"
                   width={72}
                   height={16}
                 />
