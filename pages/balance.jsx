@@ -75,8 +75,12 @@ var days = str.match(/(\d+)/);
 var numDays = days[0];
 
 function Balance({ total }) {
+  const firstElement;
   if (total !== undefined) {
-    const firstElement = total[0];
+     firstElement = total[0];
+  }
+  else{
+    firstElement = 2123;
   }
 
   let balance = {
