@@ -77,12 +77,13 @@ var numDays = days[0];
 function Balance({ total }) {
   // useEffect(() => {
   const arr = undefined;
+  console.log(total);
 
-  const firstElement = (arr || total)[0];
+  // const firstElement = (arr || total)[0];
 
-  let balance = {
-    food: firstElement,
-  };
+  // let balance = {
+  //   food: firstElement,
+  // };
 
   function changeColour(bal) {
     var colour;
