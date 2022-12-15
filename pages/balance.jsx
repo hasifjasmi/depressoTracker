@@ -77,14 +77,12 @@ var numDays = days[0];
 function Balance({ total }) {
   // useEffect(() => {
 
-  const total = total ?? [];
-
-  // let balance = {
-  var food = total[0];
-  var general = total[1];
-  var transport = total[2];
-  var totalspend = total[3];
-  // };
+  let balance = {
+    food: total[0],
+    general: total[1],
+    transport: total[2],
+    totalspend: total[3],
+  };
 
   function changeColour(bal) {
     var colour;
@@ -96,9 +94,9 @@ function Balance({ total }) {
       return (colour = "bg-green-600");
     }
   }
-  var colourFood = changeColour(food);
-  var colourGeneral = changeColour(general);
-  var colourTransport = changeColour(transport);
+  var colourFood = changeColour(balance.food);
+  var colourGeneral = changeColour(balance.general);
+  var colourTransport = changeColour(balance.transport);
 
   return (
     <>
@@ -131,13 +129,13 @@ function Balance({ total }) {
         {/* show balance */}
         <div className="flex flex-row space-x-2 justify-center ">
           <div className={`${colourFood} basis-auto p-5 rounded-md`}>
-            Food Balance: <b>RM{food}</b>
+            Food Balance: <b>RM{balance.food}</b>
           </div>
           <div className={`${colourGeneral} basis-auto p-5 rounded-md`}>
-            General Balance: <b>RM{general}</b>
+            General Balance: <b>RM{balance.general}</b>
           </div>
           <div className={`${colourTransport} basis-auto p-5 rounded-md`}>
-            Transportation Balance: <b>RM{transport}</b>
+            Transportation Balance: <b>RM{balance.transport}</b>
           </div>
         </div>
         {/* total */}
@@ -145,7 +143,7 @@ function Balance({ total }) {
           <h1 className="text-center font-mono">
             <p>
               {" "}
-              Total spent for {numDays} days: {totalspend}
+              Total spent for {numDays} days: {balance.totalspend}
             </p>
           </h1>
         </div>

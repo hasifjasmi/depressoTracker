@@ -165,9 +165,11 @@ export default function Home({ sheetdata }) {
     </div>
   );
 }
+
 export async function getServerSideProps() {
   // http://localhost:3000/api/sheet
   // https://depresso-tracker.vercel.app/api/sheet
+  //  useEffect(() => {
   const req = await fetch("https://depresso-tracker.vercel.app/api/sheet");
   const res = await req.json();
 
@@ -176,4 +178,6 @@ export async function getServerSideProps() {
       sheetdata: res.data,
     },
   };
+
+  // }, [])
 }
