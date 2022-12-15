@@ -102,9 +102,9 @@ function Balance({ total }) {
 
   function changeColour(bal) {
     var colour;
-    if (bal < 10) {
+    if (bal < 20) {
       return (colour = "bg-red-600");
-    } else if (bal > 40 && bal < 110) {
+    } else if (bal > 19 && bal < 110) {
       return (colour = "bg-yellow-300");
     } else {
       return (colour = "bg-green-600");
