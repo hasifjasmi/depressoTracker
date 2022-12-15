@@ -22,6 +22,7 @@ export default function handler(req, res) {
             };
 
             let data = await gsapi.spreadsheets.values.get(opt);
+            console.log(data);
             return res.status(400).send(JSON.stringify({error: false, data: data.data.values}));
         });
     } catch (e) {
