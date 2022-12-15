@@ -75,15 +75,14 @@ var days = str.match(/(\d+)/);
 var numDays = days[0];
 
 function Balance({ total }) {
-  // useEffect(() => {
-  const arr = undefined;
+  let balance = {
+    food: 0,
+    general: 1,
+    transport: 2,
+    totalspend: 3,
+  };
+
   console.log(total);
-
-  // const firstElement = (arr || total)[0];
-
-  // let balance = {
-  //   food: firstElement,
-  // };
 
   function changeColour(bal) {
     var colour;
