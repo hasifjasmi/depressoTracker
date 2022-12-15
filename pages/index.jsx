@@ -152,7 +152,7 @@ export default function Home({ sheetdata }) {
               <Link href={"posts/first-post"}>
                 {" "}
                 <Image
-                  className="top-0"
+                  className="relative left-[7px] bottom-0 border-2 border-teal-900"
                   src="/zaf/zaf (12).png"
                   alt="zaf pic"
                   width={72}
