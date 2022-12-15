@@ -76,17 +76,26 @@ var numDays = days[0];
 
 function Balance({ total }) {
   var firstElement;
+  var secondElement;
+  var thirdElement;
+  var forthElement;
   if (total !== undefined) {
     firstElement = total[0];
+    secondElement = total[1];
+    thirdElement = total[2];
+    forthElement = total[3];
   } else {
-    firstElement = 2123;
+    firstElement = 0;
+    secondElement = 0;
+    thirdElement = 0;
+    forthElement = 0;
   }
 
   let balance = {
     food: firstElement,
-    general: 1,
-    transport: 2,
-    totalspend: 3,
+    general: secondElement,
+    transport: thirdElement,
+    totalspend: forthElement,
   };
 
   console.log(total);
