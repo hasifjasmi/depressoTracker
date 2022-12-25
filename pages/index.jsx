@@ -9,16 +9,6 @@ import Balance from "./balance";
 // import Background from "./background";
 import List from "./list";
 
-// import BasicEmbed from "./chart";
-// import dynamic from "next/dynamic";
-
-// const BasicEmbed = dynamic(
-//   () => {
-//     return import("./chart");
-//   },
-//   { ssr: false }
-// );
-
 export default function Home({ sheetdata }) {
   var MasDate = startOfToday();
 
@@ -29,8 +19,6 @@ export default function Home({ sheetdata }) {
     new Date(2022, 7, 23),
     { unit: "day" }
   );
-
-  // console.log(calc);
 
   var str = calc;
   var days = str.match(/(\d+)/);
