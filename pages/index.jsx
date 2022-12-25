@@ -65,7 +65,7 @@ export default function Home({ sheetdata }) {
             <b>{numDays} days </b>since Zafira's last{" "}
             <Link
               target="_blank"
-              href="https://www.youtube.com/watch?v=E61gXw7aLJk&ab_channel=SendenDahaG%C3%BCzel"
+              href="https://depresso-tracker.vercel.app/reset"
             >
               Depresso
             </Link>
