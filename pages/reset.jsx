@@ -9,7 +9,7 @@ export default function dome() {
 
   return (
     <>
-      <audio ref={audioRef} src="/audio/kelik.mp3" />
+      <audio ref={audioRef} src="/audio/tekan.mp3" />
       <div className="flex flex-col items-center justify-center w-screen h-screen gap-6 bg-gradient-to-r from-[#6EB869] to-[#61C5B4]">
         <div className=" text-black font-bold text-lg">
           depressed? press it lol
