@@ -12,11 +12,10 @@ import List from "./list";
 export default function Home({ sheetdata }) {
   var MasDate = startOfToday();
 
-  var month = MasDate.getMonth();
-
+  var month = MasDate.getMonth() + 1;
   var calc = formatDistanceStrict(
-    new Date(2022, month, MasDate.getDate()),
-    new Date(2022, 7, 23),
+    new Date(2023, month, MasDate.getDate()),
+    new Date(2023, 1, 1),
     { unit: "day" }
   );
 
@@ -83,7 +82,7 @@ export default function Home({ sheetdata }) {
               className={styles.card}
             >
               <h2>Hasif's Twitter &rarr;</h2>
-              <p>Follow me cuz im funneh and i always shit post zaf </p>
+              <p>Follow me cuz im funneh and i always post zaf </p>
             </a>
             <a
               href="https://www.youtube.com/watch?v=E61gXw7aLJk&ab_channel=SendenDahaG%C3%BCzel"
@@ -112,10 +111,7 @@ export default function Home({ sheetdata }) {
               className={styles.card}
             >
               <h2>Her insta &rarr;</h2>
-              <p>
-                otw insta famous boleh buat paid review pastu dapat duit untuk
-                jadi sugar mummy {":>>>>"}
-              </p>
+              <p>otw insta famous {":>>>>"}</p>
             </a>
           </div>
         </main>
