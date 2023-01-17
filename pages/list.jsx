@@ -30,7 +30,7 @@ function List() {
           </tr>
           <tr>
             <td class="">2.</td>
-            <td class="">tbd</td>
+            <td class="">MAK DIA BALIK DARI SABAH HAHAHAHAAHAHAH</td>
           </tr>
         </tbody>
       </table>
