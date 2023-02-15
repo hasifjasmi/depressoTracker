@@ -31,39 +31,41 @@ function counter() {
 
   return (
     <>
-      <div className="flex flex-row items-center text-center place-content-center mt-80">
-        <div className="flex flex-col">
-          <label htmlFor="">players:</label>
-          <label htmlFor="">amount:</label>
+      <div className="align-middle content-center justify-center mt-[10em]">
+        <div className="flex flex-row items-center text-center place-content-center">
+          <div className="flex flex-col">
+            <label htmlFor="">players:</label>
+            <label htmlFor="">amount:</label>
+          </div>
+          <div className="flex flex-col">
+            <input
+              className="border border-black max-w-[180px] ml-5 pl-2"
+              placeholder="enter total player"
+              type="number"
+              value={player}
+              onChange={handlePlayer}
+            />
+            <input
+              type="number"
+              placeholder="enter total amount"
+              className="border border-black max-w-[180px] ml-5 pl-2"
+              value={amount}
+              onChange={handleAmount}
+            />
+          </div>
         </div>
-        <div className="flex flex-col">
-          <input
-            className="border border-black max-w-[180px] ml-5 pl-2"
-            placeholder="enter total player"
-            type="number"
-            value={player}
-            onChange={handlePlayer}
-          />
-          <input
-            type="number"
-            placeholder="enter total amount"
-            className="border border-black max-w-[180px] ml-5 pl-2"
-            value={amount}
-            onChange={handleAmount}
-          />
-        </div>
-      </div>
-      <h2 className="flex-none text-center">
-        the amount that everyone needs to pay is: RM{formattedNumber}
-      </h2>
-      <br></br>
-      <div className="text-center">
-        <h2 className="text-center">
-          tapi hasif nak main separuh masa jadi dia bayar: RM{hasifbayar}
+        <h2 className="flex-none text-center">
+          the amount that everyone needs to pay is: RM{formattedNumber}
         </h2>
-        <br />
-        <h2>jadi amount baru untuk semua adalah:</h2>
-        <h2>orang lain bayar:RM{latestformat()}</h2>
+        <br></br>
+        <div className="text-center">
+          <h2 className="text-center">
+            tapi hasif nak main separuh masa jadi dia bayar: RM{hasifbayar}
+          </h2>
+          <br />
+          <h2>jadi amount baru untuk semua adalah:</h2>
+          <h2>orang lain bayar:RM{latestformat()}</h2>
+        </div>
       </div>
     </>
   );
