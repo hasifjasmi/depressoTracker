@@ -5,6 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    extend: {
+      fontFamily: {
+        arimo: "'Arimo', sans-serif",
+      }
+    },
     container:{
       center: true,
     },
