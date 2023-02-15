@@ -4,12 +4,17 @@ import { useState } from "react";
 function counter() {
   const [player, setPlayer] = useState("");
   const [amount, setamount] = useState("");
+  const [balik, setBalik] = useState(0);
 
   const handlePlayer = (event) => {
     setPlayer(event.target.value);
   };
   const handleAmount = (event) => {
     setamount(event.target.value);
+  };
+
+  const handleBalik = (event) => {
+    setBalik(event.target.value);
   };
 
   function displayValue() {
@@ -19,13 +24,14 @@ function counter() {
   const formattedNumber = parseFloat(displayValue()).toFixed(2);
 
   // h
-  const hasifbayar = parseFloat(formattedNumber / 2).toFixed(2);
+  const sorangbayar = parseFloat(formattedNumber / 2).toFixed(2);
+  const totalamountbalikawal = sorangbayar * balik;
 
-  const amountlatest = amount - hasifbayar;
+  const amountlatest = amount - totalamountbalikawal;
   console.log(amountlatest);
   function latestformat() {
     const latestformattednumber = parseFloat(
-      amountlatest / (player - 1)
+      amountlatest / (player - balik)
     ).toFixed(2);
     return isNaN(latestformattednumber) ? "0.00" : latestformattednumber;
   }
@@ -59,6 +65,7 @@ function counter() {
             <div className="flex flex-col">
               <label htmlFor="">players:</label>
               <label htmlFor="">amount:</label>
+              <label htmlFor="">balik awal:</label>
             </div>
             <div className="flex flex-col">
               <input
@@ -75,16 +82,24 @@ function counter() {
                 value={amount}
                 onChange={handleAmount}
               />
+              <input
+                type="number"
+                placeholder="orang balik awal"
+                className="border border-black max-w-[180px] ml-5 pl-2"
+                value={balik}
+                onChange={handleBalik}
+              />
             </div>
           </div>
           <h2 className="flex-none text-center mt-4">
-            the amount that everyone needs to pay is: <br></br>RM
+            the amount that everyone need to pay: <br></br>RM
             {formattedNumber}
           </h2>
           <br></br>
           <div className="text-center">
             <h2 className="text-center">
-              tapi hasif nak main separuh masa jadi dia bayar: RM{hasifbayar}
+              tapi {balik} orang nak main separuh masa jadi diorang bayar: RM
+              {sorangbayar}
             </h2>
             <br />
             <h2>jadi amount baru untuk semua adalah:</h2>
