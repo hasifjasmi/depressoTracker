@@ -102,8 +102,8 @@ function counter() {
               {sorangbayar}
             </h2>
             <br />
-            <h2>jadi amount baru untuk semua adalah:</h2>
-            <h2>orang lain bayar:RM{latestformat()}</h2>
+            <h2>jadi amount baru untuk</h2>
+            <h2>orang lain kena bayar: RM{latestformat()}</h2>
           </div>
         </div>
       </div>
