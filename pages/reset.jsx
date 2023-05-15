@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function dome() {
   const audioRef = React.useRef();
@@ -7,21 +7,206 @@ export default function dome() {
     audioRef.current.play();
   }
 
+  const [counter1, setCounter1] = useState(0);
+  const [counter2, setCounter2] = useState(0);
+  const [counter3, setCounter3] = useState(0);
+  const [counter4, setCounter4] = useState(0);
+
+  const [colour, setColour] = useState("red");
+
+  const colourchange = () => {
+    if (counter1 || counter2 || counter3 || counter4 >= 10) {
+      setColour("orange");
+    }
+  };
+
   return (
     <>
       <audio ref={audioRef} src="/audio/kelik.mp3" />
       <div className="flex flex-col items-center justify-center w-screen h-screen gap-6 bg-gradient-to-r from-[#6EB869] to-[#61C5B4]">
-        <div className=" text-black font-bold text-lg">
-          depressed? press it lol
-        </div>
-        <div
-          onClick={handleClick}
-          className="button w-[600px] h-[300px] bg-red-600 rounded-lg cursor-pointer select-none active:translate-y-2 active:[box-shadow:0_0px_0_0_#a10a0a,0_0px_0_0_#a10a0a] active:border-b-[0px] transition-all duration-150 [box-shadow:0_10px_0_0_#a10a0a,0_15px_0_0_#a10a0a] border-b-[1px] border-red-400"
-        >
-          {" "}
-          <span className="flex flex-col justify-center items-center h-full text-white font-bold text-[100px]">
-            RESET
-          </span>
+        <div className="grid grid-rows-2 grid-cols-2 gap-10 text-xl">
+          <div className={`border text-center bg-${colour}-600 w-96`}>
+            <span className="">player 1</span>
+            <div>
+              <button
+                onClick={() => {
+                  setCounter1(counter1 - counter1);
+                }}
+              >
+                RESET
+              </button>
+            </div>
+            <div className="mt-10 mb-10 text-lg">
+              <span className="">{counter1}</span>
+            </div>
+            <div className="button flex place-content-center gap-5">
+              <button
+                onClick={() => {
+                  setCounter1(counter1 + 5);
+                }}
+              >
+                +5
+              </button>
+              <button
+                onClick={() => {
+                  setCounter1(counter1 + 1);
+                }}
+              >
+                +1
+              </button>
+              <button
+                onClick={() => {
+                  setCounter1(counter1 - 1);
+                }}
+              >
+                -1
+              </button>
+              <button
+                onClick={() => {
+                  setCounter1(counter1 - 5);
+                }}
+              >
+                -5
+              </button>
+            </div>
+          </div>
+
+          <div className={`border text-center bg-${colour}-600 w-96`}>
+            <span className="">player 2</span>
+            <div>
+              <button
+                onClick={() => {
+                  setCounter2(counter2 - counter2);
+                }}
+              >
+                RESET
+              </button>
+            </div>
+            <div className="mt-10 mb-10 text-lg">
+              <span onChange={colourchange}>{counter2}</span>
+            </div>
+            <div className="button flex place-content-center gap-5">
+              <button
+                onClick={() => {
+                  setCounter2(counter2 + 5);
+                }}
+              >
+                +5
+              </button>
+              <button
+                onClick={() => {
+                  setCounter2(counter2 + 1);
+                }}
+              >
+                +1
+              </button>
+              <button
+                onClick={() => {
+                  setCounter2(counter2 - 1);
+                }}
+              >
+                -1
+              </button>
+              <button
+                onClick={() => {
+                  setCounter2(counter2 - 5);
+                }}
+              >
+                -5
+              </button>
+            </div>
+          </div>
+
+          <div className="border text-center border-red-600 w-96">
+            <span className="">player 3</span>
+            <div>
+              <button
+                onClick={() => {
+                  setCounter3(counter3 - counter3);
+                }}
+              >
+                RESET
+              </button>
+            </div>
+            <div className="mt-10 mb-10 text-lg">
+              <span className="">{counter3}</span>
+            </div>
+            <div className="button flex place-content-center gap-5">
+              <button
+                onClick={() => {
+                  setCounter3(counter3 + 5);
+                }}
+              >
+                +5
+              </button>
+              <button
+                onClick={() => {
+                  setCounter3(counter3 + 1);
+                }}
+              >
+                +1
+              </button>
+              <button
+                onClick={() => {
+                  setCounter3(counter3 - 1);
+                }}
+              >
+                -1
+              </button>
+              <button
+                onClick={() => {
+                  setCounter3(counter3 - 5);
+                }}
+              >
+                -5
+              </button>
+            </div>
+          </div>
+          <div className="border text-center border-red-600 w-96">
+            <span className="">player 4</span>
+            <div>
+              <button
+                onClick={() => {
+                  setCounter4(counter4 - counter4);
+                }}
+              >
+                RESET
+              </button>
+            </div>
+            <div className="mt-10 mb-10 text-lg">
+              <span className="">{counter4}</span>
+            </div>
+            <div className="button flex place-content-center gap-5">
+              <button
+                onClick={() => {
+                  setCounter4(counter4 + 5);
+                }}
+              >
+                +5
+              </button>
+              <button
+                onClick={() => {
+                  setCounter4(counter4 + 1);
+                }}
+              >
+                +1
+              </button>
+              <button
+                onClick={() => {
+                  setCounter4(counter4 - 1);
+                }}
+              >
+                -1
+              </button>
+              <button
+                onClick={() => {
+                  setCounter4(counter4 - 5);
+                }}
+              >
+                -5
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </>
