@@ -91,7 +91,9 @@ export default function dome() {
       <audio ref={audioRef} src="/audio/kelik.mp3" />
       <div className="">
         <div className="grid grid-rows-2 grid-cols-2  text-xl h-full w-full ">
-          <div className={`border text-center bg-${colour1}`}>
+          <div
+            className={`border border-black dark:border-white text-center bg-${colour1}`}
+          >
             <span className="text-gray-900">player 1</span>
             <div>
               <button
@@ -147,7 +149,9 @@ export default function dome() {
             </div>
           </div>
 
-          <div className={`border text-center bg-${colour2} `}>
+          <div
+            className={`border border-black dark:border-white text-center bg-${colour2} `}
+          >
             <span className="text-gray-900">player 2</span>
             <div>
               <button
@@ -203,7 +207,9 @@ export default function dome() {
             </div>
           </div>
 
-          <div className={`border text-center bg-${colour3} `}>
+          <div
+            className={`border border-black dark:border-white text-center bg-${colour3} `}
+          >
             <span className="text-gray-900">player 3</span>
             <div>
               <button
@@ -259,7 +265,9 @@ export default function dome() {
             </div>
           </div>
 
-          <div className={`border text-center bg-${colour4} `}>
+          <div
+            className={`border border-black dark:border-white text-center bg-${colour4} `}
+          >
             <span className="text-gray-900">player 4</span>
             <div>
               <button
