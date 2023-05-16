@@ -92,7 +92,7 @@ export default function dome() {
       <div className="">
         <div className="grid grid-rows-2 grid-cols-2  text-xl h-full w-full ">
           <div className={`border text-center bg-${colour1}`}>
-            <span className="">player 1</span>
+            <span className="text-gray-900">player 1</span>
             <div>
               <button
                 className="btn btn-sm"
@@ -104,8 +104,8 @@ export default function dome() {
                 RESET
               </button>
             </div>
-            <div className="mt-20 mb-20 text-lg">
-              <span className="btn btn-outline">{counter1}</span>
+            <div className="mt-20 mb-20 text-lg text-gray-900">
+              <span className="btn btn-accent">{counter1}</span>
             </div>
             <div className=" flex place-content-center mb-10 gap-1">
               <button
@@ -148,7 +148,7 @@ export default function dome() {
           </div>
 
           <div className={`border text-center bg-${colour2} `}>
-            <span className="">player 2</span>
+            <span className="text-gray-900">player 2</span>
             <div>
               <button
                 className="btn btn-sm"
@@ -161,7 +161,7 @@ export default function dome() {
               </button>
             </div>
             <div className="mt-20 mb-20 text-lg">
-              <span className="btn btn-outline">{counter2}</span>
+              <span className="btn btn-accent">{counter2}</span>
             </div>
             <div className="flex place-content-center gap-1">
               <button
@@ -204,7 +204,7 @@ export default function dome() {
           </div>
 
           <div className={`border text-center bg-${colour3} `}>
-            <span className="">player 3</span>
+            <span className="text-gray-900">player 3</span>
             <div>
               <button
                 className="btn btn-sm"
@@ -217,7 +217,7 @@ export default function dome() {
               </button>
             </div>
             <div className="mt-20 mb-20 text-lg">
-              <span className="btn btn-outline">{counter3}</span>
+              <span className="btn btn-accent">{counter3}</span>
             </div>
             <div className="button flex place-content-center gap-1">
               <button
@@ -260,7 +260,7 @@ export default function dome() {
           </div>
 
           <div className={`border text-center bg-${colour4} `}>
-            <span className="">player 4</span>
+            <span className="text-gray-900">player 4</span>
             <div>
               <button
                 className="btn btn-sm"
@@ -273,7 +273,7 @@ export default function dome() {
               </button>
             </div>
             <div className="mt-20 mb-20 text-lg">
-              <span className="btn btn-outline">{counter4}</span>
+              <span className="btn btn-accent">{counter4}</span>
             </div>
             <div className="button flex place-content-center gap-1">
               <button
