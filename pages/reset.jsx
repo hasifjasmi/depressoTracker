@@ -88,14 +88,14 @@ export default function dome() {
 
   return (
     <>
-      <div>
-        <div className="grid grid-rows-2 grid-cols-2 text-xl h-full w-full">
+      <div className="w-full">
+        <div className="grid grid-cols-2 w-full h-full justify-center">
           <div
             className={`border border-black dark:border-white text-center bg-${colour1}`}
           >
             <div className="flex flex-col items-center">
               <input
-                className="text-center bg-transparent placeholder-black"
+                className="text-center text-black bg-transparent placeholder-black"
                 placeholder="Player 1"
                 type="text"
               />
@@ -157,7 +157,7 @@ export default function dome() {
           >
             <div className="flex flex-col items-center">
               <input
-                className="text-center bg-transparent placeholder-black"
+                className="text-center text-black bg-transparent placeholder-black"
                 placeholder="Player 2"
                 type="text"
               />
@@ -171,7 +171,7 @@ export default function dome() {
                 RESET
               </button>
             </div>
-            <div className="mt-20 mb-20 text-lg">
+            <div className="mt-20 mb-20 text-black">
               <p className="text-7xl">{counter2}</p>
             </div>
             <div className="flex place-content-center gap-1">
@@ -219,7 +219,7 @@ export default function dome() {
           >
             <div className="flex flex-col items-center">
               <input
-                className="text-center bg-transparent placeholder-black"
+                className="text-center text-black bg-transparent placeholder-black"
                 placeholder="Player 3"
                 type="text"
               />
@@ -233,7 +233,7 @@ export default function dome() {
                 RESET
               </button>
             </div>
-            <div className="mt-20 mb-20 text-lg">
+            <div className="mt-20 mb-20 text-black">
               <p className="text-7xl">{counter3}</p>
             </div>
             <div className="button flex place-content-center gap-1">
@@ -281,7 +281,7 @@ export default function dome() {
           >
             <div className="flex flex-col items-center">
               <input
-                className="text-center bg-transparent placeholder-black"
+                className="text-center text-black bg-transparent placeholder-black"
                 placeholder="Player 4"
                 type="text"
               />
@@ -295,7 +295,7 @@ export default function dome() {
                 RESET
               </button>
             </div>
-            <div className="mt-20 mb-20 text-lg">
+            <div className="mt-20 mb-20 text-black">
               <p className="text-7xl">{counter4}</p>
             </div>
             <div className="button flex place-content-center gap-1">
