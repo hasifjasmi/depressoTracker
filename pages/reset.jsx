@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function dome() {
   const audioRef = React.useRef();
@@ -88,16 +88,19 @@ export default function dome() {
 
   return (
     <>
-      <audio ref={audioRef} src="/audio/kelik.mp3" />
-      <div className="">
-        <div className="grid grid-rows-2 grid-cols-2  text-xl h-full w-full ">
+      <div>
+        <div className="grid grid-rows-2 grid-cols-2 text-xl h-full w-full">
           <div
             className={`border border-black dark:border-white text-center bg-${colour1}`}
           >
-            <span className="text-gray-900">player 1</span>
-            <div>
+            <div className="flex flex-col items-center">
+              <input
+                className="text-center bg-transparent placeholder-black"
+                placeholder="Player 1"
+                type="text"
+              />
               <button
-                className="btn btn-sm"
+                className="btn btn-sm w-16"
                 onClick={() => {
                   setCounter1(counter1 - counter1);
                   setColour1("green-500");
@@ -107,7 +110,7 @@ export default function dome() {
               </button>
             </div>
             <div className="mt-20 mb-20 text-lg text-gray-900">
-              <span className="btn btn-accent">{counter1}</span>
+              <p className="text-7xl">{counter1}</p>
             </div>
             <div className=" flex place-content-center mb-10 gap-1">
               <button
@@ -152,8 +155,12 @@ export default function dome() {
           <div
             className={`border border-black dark:border-white text-center bg-${colour2} `}
           >
-            <span className="text-gray-900">player 2</span>
-            <div>
+            <div className="flex flex-col items-center">
+              <input
+                className="text-center bg-transparent placeholder-black"
+                placeholder="Player 2"
+                type="text"
+              />
               <button
                 className="btn btn-sm"
                 onClick={() => {
@@ -165,7 +172,7 @@ export default function dome() {
               </button>
             </div>
             <div className="mt-20 mb-20 text-lg">
-              <span className="btn btn-accent">{counter2}</span>
+              <p className="text-7xl">{counter2}</p>
             </div>
             <div className="flex place-content-center gap-1">
               <button
@@ -210,8 +217,12 @@ export default function dome() {
           <div
             className={`border border-black dark:border-white text-center bg-${colour3} `}
           >
-            <span className="text-gray-900">player 3</span>
-            <div>
+            <div className="flex flex-col items-center">
+              <input
+                className="text-center bg-transparent placeholder-black"
+                placeholder="Player 3"
+                type="text"
+              />
               <button
                 className="btn btn-sm"
                 onClick={() => {
@@ -223,7 +234,7 @@ export default function dome() {
               </button>
             </div>
             <div className="mt-20 mb-20 text-lg">
-              <span className="btn btn-accent">{counter3}</span>
+              <p className="text-7xl">{counter3}</p>
             </div>
             <div className="button flex place-content-center gap-1">
               <button
@@ -268,8 +279,12 @@ export default function dome() {
           <div
             className={`border border-black dark:border-white text-center bg-${colour4} `}
           >
-            <span className="text-gray-900">player 4</span>
-            <div>
+            <div className="flex flex-col items-center">
+              <input
+                className="text-center bg-transparent placeholder-black"
+                placeholder="Player 4"
+                type="text"
+              />
               <button
                 className="btn btn-sm"
                 onClick={() => {
@@ -281,7 +296,7 @@ export default function dome() {
               </button>
             </div>
             <div className="mt-20 mb-20 text-lg">
-              <span className="btn btn-accent">{counter4}</span>
+              <p className="text-7xl">{counter4}</p>
             </div>
             <div className="button flex place-content-center gap-1">
               <button
