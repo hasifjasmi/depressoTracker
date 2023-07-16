@@ -47,8 +47,8 @@ export default function dome() {
   return (
     <>
       {/* <div className="w-full h-full"> */}
-      <div className="flex min-w-screen">
-        <div class="flex flex-col w-screen">
+      <div className="flex">
+        <div class="flex flex-col">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
@@ -92,7 +92,7 @@ export default function dome() {
           </button>
         </div>
 
-        <div class="flex flex-col w-screen">
+        <div class="flex flex-col">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
