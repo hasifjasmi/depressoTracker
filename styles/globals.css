@@ -7,9 +7,10 @@ html{
 
 body{
     overflow-x: hidden;
-    position: relative;
-    height: -webkit-fill-available;
-    width: -webkit-fill-available;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 @tailwind base;
