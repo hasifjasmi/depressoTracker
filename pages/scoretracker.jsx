@@ -47,8 +47,8 @@ export default function dome() {
   return (
     <>
       {/* <div className="w-full h-full"> */}
-      <div className="grid grid-cols-2 justify-center">
-        <div class="flex flex-col">
+      <div className="flex min-w-screen">
+        <div class="flex flex-col w-screen">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
@@ -71,29 +71,28 @@ export default function dome() {
           </div>
 
           <button
-            className={`border border-black dark:border-white text-center bg-${colour1}`}
+            className={`h-screen text-center bg-blue-500`}
             onClick={() => {
               setCounter1(counter1 + 1);
-              colourchange1();
             }}
           >
             <div className="flex flex-col items-center">
               <input
-                className="text-center text-black bg-transparent placeholder-black"
+                className="text-center text-4xl bg-transparent placeholder-black"
                 placeholder="Player 1"
                 type="text"
               />
             </div>
 
             <div className="mt-20 mb-20 text-lg text-gray-900">
-              <p className="text-7xl">{counter1}</p>
+              <p className="text-9xl">{counter1}</p>
             </div>
 
             <div className=" flex place-content-center mb-10 gap-1"></div>
           </button>
         </div>
 
-        <div class="flex flex-col">
+        <div class="flex flex-col w-screen">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
@@ -116,22 +115,21 @@ export default function dome() {
           </div>
 
           <button
-            className={`border border-black dark:border-white text-center bg-${colour2}`}
+            className={`min-h-screen text-center bg-red-500`}
             onClick={() => {
               setCounter2(counter2 + 1);
-              colourchange1();
             }}
           >
             <div className="flex flex-col items-center">
               <input
-                className="text-center text-black bg-transparent placeholder-black"
-                placeholder="Player 1"
+                className="text-center text-4xl bg-transparent placeholder-black"
+                placeholder="Player 2"
                 type="text"
               />
             </div>
 
             <div className="mt-20 mb-20 text-lg text-gray-900">
-              <p className="text-7xl">{counter2}</p>
+              <p className="text-9xl">{counter2}</p>
             </div>
 
             <div className=" flex place-content-center mb-10 gap-1"></div>
