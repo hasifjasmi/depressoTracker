@@ -46,7 +46,7 @@ export default function dome() {
 
   return (
     <>
-      <div className="flex ">
+      <div className="flex w-full lg:max-w-screen-lg mx-auto">
         <div class="flex flex-col">
           <div class="flex self-center gap-6">
             <button
