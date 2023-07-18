@@ -6,49 +6,11 @@ export default function dome() {
   const [counter1, setCounter1] = useState(0);
   const [counter2, setCounter2] = useState(0);
 
-  const [colour1, setColour1] = useState("green-500");
-  const [colour2, setColour2] = useState("green-500");
-
-  const colourchange1 = () => {
-    if (counter1 >= 9) {
-      setColour1("lime-500");
-    }
-    if (counter1 >= 19) {
-      setColour1("yellow-500");
-    }
-    if (counter1 >= 29) {
-      setColour1("amber-500");
-    }
-    if (counter1 >= 39) {
-      setColour1("orange-500");
-    }
-    if (counter1 >= 44) {
-      setColour1("red-600");
-    }
-  };
-  const colourchange2 = () => {
-    if (counter2 >= 9) {
-      setColour2("lime-500");
-    }
-    if (counter2 >= 19) {
-      setColour2("yellow-500");
-    }
-    if (counter2 >= 29) {
-      setColour2("amber-500");
-    }
-    if (counter2 >= 39) {
-      setColour2("orange-500");
-    }
-    if (counter2 >= 44) {
-      setColour2("red-600");
-    }
-  };
-
   return (
     <>
-      <div className="flex w-full lg:max-w-screen-lg mx-auto">
+      <div className="flex flex-col lg:flex-row w-full lg:max-w-screen-lg mx-auto">
         {/* blue side */}
-        <div class="flex flex-col w-[50%]">
+        <div class="flex flex-col w-full lg:w-1/2">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
@@ -93,7 +55,7 @@ export default function dome() {
         </div>
 
         {/* red side */}
-        <div class="flex flex-col w-[50%]">
+        <div class="flex flex-col w-full lg:w-1/2">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
