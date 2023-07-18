@@ -46,9 +46,9 @@ export default function dome() {
 
   return (
     <>
-      <div className="flex w-full lg:max-w-screen-lg mx-auto">
+      <div className="flex w-[100%] h-[100%] lg:max-w-screen-lg mx-auto">
         {/* blue side */}
-        <div class="flex flex-col w-[50%]">
+        <div class="flex flex-col">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
@@ -93,7 +93,7 @@ export default function dome() {
         </div>
 
         {/* red side */}
-        <div class="flex flex-col w-[50%]">
+        <div class="flex flex-col">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
@@ -116,7 +116,7 @@ export default function dome() {
           </div>
 
           <button
-            className={`min-h-screen text-center bg-red-500`}
+            className="h-[100%] text-center bg-red-500"
             onClick={() => {
               setCounter2(counter2 + 1);
             }}
