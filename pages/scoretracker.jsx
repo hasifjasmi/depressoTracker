@@ -10,7 +10,7 @@ export default function dome() {
     <>
       <div className="flex w-auto">
         {/* _____________________________________________________________________blue side */}
-        <div class="flex flex-col w-[50vh]">
+        <div class="flex flex-col w-[25vh]">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
@@ -53,7 +53,7 @@ export default function dome() {
         </div>
 
         {/* ________________________________________________________________________________________________________________-red side */}
-        <div class="flex flex-col w-[50vh]">
+        <div class="flex flex-col w-[25vh]">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
