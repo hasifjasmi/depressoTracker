@@ -47,7 +47,8 @@ export default function dome() {
   return (
     <>
       <div className="flex w-full lg:max-w-screen-lg mx-auto">
-        <div class="flex flex-col">
+        {/* blue side */}
+        <div class="flex flex-col w-[50%]">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
@@ -91,8 +92,8 @@ export default function dome() {
           </button>
         </div>
 
-        {/* second border */}
-        <div class="flex flex-col">
+        {/* red side */}
+        <div class="flex flex-col w-[50%]">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
