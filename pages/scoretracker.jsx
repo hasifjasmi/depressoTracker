@@ -8,15 +8,14 @@ export default function dome() {
 
   return (
     <>
-      <div className="flex lg:flex-row w-full lg:max-w-screen-lg mx-auto">
-        {/* blue side */}
-        <div class="flex flex-col w-full lg:w-1/2">
+      <div className="flex w-auto">
+        {/* _____________________________________________________________________blue side */}
+        <div class="flex flex-col w-[50vh]">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
               onClick={() => {
                 setCounter1(counter1 - counter1);
-                setColour1("green-500");
               }}
             >
               RESET
@@ -25,7 +24,6 @@ export default function dome() {
               className="btn btn-sm"
               onClick={() => {
                 setCounter1(counter1 - 1);
-                colourchange1();
               }}
             >
               -1
@@ -47,21 +45,20 @@ export default function dome() {
             </div>
 
             <div className="mt-20 mb-20 text-lg text-gray-900">
-              <p className="text-9xl">{counter1}</p>
+              <span className="text-9xl">{counter1}</span>
             </div>
 
             <div className=" flex place-content-center mb-10 gap-1"></div>
           </button>
         </div>
 
-        {/* red side */}
-        <div class="flex flex-col w-full lg:w-1/2">
+        {/* ________________________________________________________________________________________________________________-red side */}
+        <div class="flex flex-col w-[50vh]">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
               onClick={() => {
                 setCounter2(counter2 - counter2);
-                colourchange2("green-500");
               }}
             >
               RESET
@@ -70,7 +67,6 @@ export default function dome() {
               className="btn btn-sm"
               onClick={() => {
                 setCounter2(counter2 - 1);
-                colourchange2();
               }}
             >
               -1
@@ -92,7 +88,7 @@ export default function dome() {
             </div>
 
             <div className="mt-20 mb-20 text-lg text-gray-900">
-              <p className="text-9xl">{counter2}</p>
+              <span className="text-9xl">{counter2}</span>
             </div>
 
             <div className=" flex place-content-center mb-10 gap-1"></div>
