@@ -8,7 +8,7 @@ export default function dome() {
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row w-full lg:max-w-screen-lg mx-auto">
+      <div className="flex lg:flex-row w-full lg:max-w-screen-lg mx-auto">
         {/* blue side */}
         <div class="flex flex-col w-full lg:w-1/2">
           <div class="flex self-center gap-6">
