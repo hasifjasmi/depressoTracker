@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Head from "next/head";
 
 export default function dome() {
   const audioRef = React.useRef();
@@ -8,9 +9,12 @@ export default function dome() {
 
   return (
     <>
-      <div className="flex w-auto">
+      <Head>
+        <meta name="viewport" content="width=device-width initial-scale=1" />
+      </Head>
+      <div className="flex ">
         {/* _____________________________________________________________________blue side */}
-        <div class="flex flex-col w-[25vh]">
+        <div class="flex flex-col w-1/2">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
@@ -53,7 +57,7 @@ export default function dome() {
         </div>
 
         {/* ________________________________________________________________________________________________________________-red side */}
-        <div class="flex flex-col w-[25vh]">
+        <div class="flex flex-col w-1/2">
           <div class="flex self-center gap-6">
             <button
               className="btn btn-sm w-16 "
