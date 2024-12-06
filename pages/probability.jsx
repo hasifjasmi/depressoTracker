@@ -15,6 +15,8 @@ export default function dome() {
         straightKill: 0, // Count kills for 'straight'
         feint: 0,
         feintKill: 0, // Count kills for 'feint'
+        quick: 0,
+        quickKill: 0, // Count kills for 'quick'
       })),
     Opposite: Array(2)
       .fill(null)
@@ -26,6 +28,8 @@ export default function dome() {
         straightKill: 0,
         feint: 0,
         feintKill: 0,
+        quick: 0,
+        quickKill: 0, // Count kills for 'quick'
       })),
     Middle: Array(2)
       .fill(null)
@@ -37,6 +41,8 @@ export default function dome() {
         straightKill: 0,
         feint: 0,
         feintKill: 0,
+        quick: 0,
+        quickKill: 0, // Count kills for 'quick'
       })),
     Substituion: Array(2)
       .fill(null)
@@ -48,6 +54,8 @@ export default function dome() {
         straightKill: 0,
         feint: 0,
         feintKill: 0,
+        quick: 0,
+        quickKill: 0, // Count kills for 'quick'
       })),
   });
 
@@ -78,9 +86,10 @@ export default function dome() {
       <div className="p-2">
         <div className="px-24 flex flex-row gap-32">
           <label>Cross</label>
-          <label className="pl-28">Straight</label>
-          <label>Feint</label>
-          <label>Quick</label>
+          <label className="pl-16">Straight</label>
+          <label className="pl-16">Feint</label>
+          <label className="pl-16">Quick</label>
+          <div className="pl-16">Output</div>
         </div>
         {Object.entries(positions).map(([position, players]) => (
           <div key={position}>
@@ -107,7 +116,7 @@ export default function dome() {
                       />
                     </label>
 
-                    <div className="flex flex-row gap-10">
+                    <div className="flex flex-row gap-5">
                       {Object.entries(player).map(([category, value]) =>
                         category !== "number" ? (
                           <div key={category}>
@@ -133,18 +142,19 @@ export default function dome() {
                             >
                               {category.includes("Kill") ? "Kill" : "Hit"}
                             </button>
-                            {/* <button
-                          onClick={() =>
-                            handleScoreUpdate(
-                              position,
-                              playerIndex,
-                              category,
-                              -1
-                            )
-                          }
-                        >
-                          Undo
-                        </button> */}
+                            <button
+                              className="px-2 py-1 mt-1 text-center bg-gray-500 rounded-lg text-white"
+                              onClick={() =>
+                                handleScoreUpdate(
+                                  position,
+                                  playerIndex,
+                                  category,
+                                  -1
+                                )
+                              }
+                            >
+                              Undo
+                            </button>
                           </div>
                         ) : null
                       )}
@@ -152,36 +162,86 @@ export default function dome() {
                   </div>
                 ))}
               </div>
-              <div className="flex flex-col gap-5">
-                <div className="">Output</div>
-                <div className="flex flex-col gap-16">
+              {/* OUTPUT SECTION */}
+              <div className="flex flex-col gap-5  w-96">
+                <div className="flex flex-col gap-">
                   {players.map((player, playerIndex) => (
-                    <div className="flex flex-row gap-5" key={playerIndex}>
-                      <span>Cross kill=</span>
-                      {player.crossKill}/{player.cross + player.crossKill} =
-                      {isNaN(
-                        player.crossKill / (player.cross + player.crossKill)
-                      ) || player.cross + player.crossKill === 0
-                        ? 0
-                        : (
-                            (player.crossKill /
-                              (player.cross + player.crossKill)) *
-                            100
-                          ).toFixed(2)}
-                      %<span>Straight kill = </span>
-                      {player.straightKill}/
-                      {player.straight + player.straightKill} =
-                      {isNaN(
-                        player.straightKill /
-                          (player.straight + player.straightKill)
-                      ) || player.straight + player.straightKill === 0
-                        ? 0
-                        : (
-                            (player.straightKill /
-                              (player.straight + player.straightKill)) *
-                            100
-                          ).toFixed(2)}
-                      %
+                    <div
+                      className="flex flex-row gap-1 p-2 pt-5"
+                      key={playerIndex}
+                    >
+                      <div
+                        className={`flex flex-col border border-1 ${
+                          [
+                            "Opposite",
+                            "Middle",
+                            "Setter",
+                            "Substitution",
+                          ].includes(player.position)
+                            ? "mt-10"
+                            : "mt-5"
+                        }`}
+                      >
+                        <div>
+                          Player {player.number === "" ? "NaN" : player.number}
+                        </div>
+                        <div className="flex flex-row w-[22rem]">
+                          <span>Cross kill=</span>
+                          {player.crossKill}/{player.cross + player.crossKill}{" "}
+                          {isNaN(
+                            player.crossKill / (player.cross + player.crossKill)
+                          ) || player.cross + player.crossKill === 0
+                            ? 0
+                            : (
+                                (player.crossKill /
+                                  (player.cross + player.crossKill)) *
+                                100
+                              ).toFixed(2)}
+                          %<span className="pl-4">Straight kill = </span>
+                          {player.straightKill}/
+                          {player.straight + player.straightKill}{" "}
+                          {isNaN(
+                            player.straightKill /
+                              (player.straight + player.straightKill)
+                          ) || player.straight + player.straightKill === 0
+                            ? 0
+                            : (
+                                (player.straightKill /
+                                  (player.straight + player.straightKill)) *
+                                100
+                              ).toFixed(2)}
+                          %
+                        </div>
+                        <div>
+                          <div className="flex flex-row ">
+                            <span>Feint kill=</span>
+                            {player.feintKill}/{player.feint + player.feintKill}{" "}
+                            {isNaN(
+                              player.feintKill /
+                                (player.feint + player.feintKill)
+                            ) || player.feint + player.feintKill === 0
+                              ? 0
+                              : (
+                                  (player.feintKill /
+                                    (player.feint + player.feintKill)) *
+                                  100
+                                ).toFixed(2)}
+                            %<span className="pl-4">Quick kill = </span>
+                            {player.quickKill}/{player.quick + player.quickKill}{" "}
+                            {isNaN(
+                              player.quickKill /
+                                (player.quick + player.quickKill)
+                            ) || player.quick + player.quickKill === 0
+                              ? 0
+                              : (
+                                  (player.quickKill /
+                                    (player.quick + player.quickKill)) *
+                                  100
+                                ).toFixed(2)}
+                            %
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   ))}
                 </div>
